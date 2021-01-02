@@ -1,24 +1,24 @@
 <sdf version='1.5'>
   <model name='tailsitter'>
     <link name='base_link'>
-      <pose>0 0 0.2 0 0 0</pose>
+      <pose>0 0 0.1 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>1.6</mass>
         <inertia>
-          <ixx>0.147563</ixx>
+          <ixx>0.0147563</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0.0458929</iyy>
           <iyz>0</iyz>
-          <izz>0.1977</izz>
+          <izz>0.01977</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.47 0.47 0.11</size>
+            <size>1.10 0.47 0.11</size>
           </box>
         </geometry>
         <surface>
@@ -119,7 +119,7 @@
       </axis>
     </joint>
     <link name='rotor_0'>
-      <pose>-0.3 0.3 0.5 0 0 0</pose>
+      <pose>-0.3 -0.4 0.5 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -185,7 +185,7 @@
       </axis>
     </joint>
     <link name='rotor_1'>
-      <pose>-0.3 -0.3 0.4 0 0 0</pose>
+      <pose>-0.3 0.4 0.4 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -251,7 +251,7 @@
       </axis>
     </joint>
     <link name='rotor_2'>
-      <pose>-0.3 -0.3 0.5 0 0 0</pose>
+      <pose>-0.3 0.4 0.5 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -317,7 +317,7 @@
       </axis>
     </joint>
     <link name='rotor_3'>
-      <pose>-0.3 0.3 0.4 0 0 0</pose>
+      <pose>-0.3 -0.4 0.4 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -383,7 +383,7 @@
       </axis>
     </joint>
     <link name='rotor_4'>
-      <pose>0.0 0.0 1.0 0 1.57 0</pose>
+      <pose>0.0 0.0 1.0 0 -1.57 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -636,11 +636,11 @@
       <jointName>rotor_0_joint</jointName>
       <linkName>rotor_0</linkName>
       <turningDirection>ccw</turningDirection>
-      <timeConstantUp>0.0125</timeConstantUp>
-      <timeConstantDown>0.025</timeConstantDown>
+      <timeConstantUp>0.00125</timeConstantUp>
+      <timeConstantDown>0.0025</timeConstantDown>
       <maxRotVelocity>1200</maxRotVelocity>
       <motorConstant>8.54858e-06</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <momentConstant>-0.06</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>0</motorNumber>
       <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
@@ -653,11 +653,11 @@
       <jointName>rotor_1_joint</jointName>
       <linkName>rotor_1</linkName>
       <turningDirection>ccw</turningDirection>
-      <timeConstantUp>0.0125</timeConstantUp>
-      <timeConstantDown>0.025</timeConstantDown>
+      <timeConstantUp>0.00125</timeConstantUp>
+      <timeConstantDown>0.0025</timeConstantDown>
       <maxRotVelocity>1200</maxRotVelocity>
       <motorConstant>8.54858e-06</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <momentConstant>-0.06</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>1</motorNumber>
       <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
@@ -670,11 +670,11 @@
       <jointName>rotor_2_joint</jointName>
       <linkName>rotor_2</linkName>
       <turningDirection>cw</turningDirection>
-      <timeConstantUp>0.0125</timeConstantUp>
-      <timeConstantDown>0.025</timeConstantDown>
+      <timeConstantUp>0.00125</timeConstantUp>
+      <timeConstantDown>0.0025</timeConstantDown>
       <maxRotVelocity>1200</maxRotVelocity>
       <motorConstant>8.54858e-06</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <momentConstant>-0.06</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>2</motorNumber>
       <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
@@ -687,17 +687,34 @@
       <jointName>rotor_3_joint</jointName>
       <linkName>rotor_3</linkName>
       <turningDirection>cw</turningDirection>
-      <timeConstantUp>0.0125</timeConstantUp>
-      <timeConstantDown>0.025</timeConstantDown>
+      <timeConstantUp>0.00125</timeConstantUp>
+      <timeConstantDown>0.0025</timeConstantDown>
       <maxRotVelocity>1200</maxRotVelocity>
       <motorConstant>8.54858e-06</motorConstant>
-      <momentConstant>0.06</momentConstant>
+      <momentConstant>-0.06</momentConstant>
       <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
       <motorNumber>3</motorNumber>
       <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
       <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
       <motorSpeedPubTopic>/motor_speed/3</motorSpeedPubTopic>
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    </plugin>
+    <plugin name='pitch_motor_model' filename='libgazebo_motor_model.so'>
+      <robotNamespace></robotNamespace>
+      <jointName>rotor_4_joint</jointName>
+      <linkName>rotor_4</linkName>
+      <turningDirection>cw</turningDirection>
+      <timeConstantUp>0.00125</timeConstantUp>
+      <timeConstantDown>0.0025</timeConstantDown>
+      <maxRotVelocity>2200</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.06</momentConstant>
+      <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
+      <motorNumber>4</motorNumber>
+      <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <motorSpeedPubTopic>/motor_speed/4</motorSpeedPubTopic>
+      <rotorVelocitySlowdownSim>1</rotorVelocitySlowdownSim>
     </plugin>
     <plugin name='gazebo_imu_plugin' filename='libgazebo_imu_plugin.so'>
       <robotNamespace></robotNamespace>
@@ -755,7 +772,7 @@
         <channel name="rotor0">
           <input_index>0</input_index>
           <input_offset>0</input_offset>
-          <input_scaling>1200</input_scaling>
+          <input_scaling>1000</input_scaling>
           <zero_position_disarmed>0</zero_position_disarmed>
           <zero_position_armed>0</zero_position_armed>
           <joint_control_type>velocity</joint_control_type>
@@ -764,7 +781,7 @@
         <channel name="rotor1">
           <input_index>1</input_index>
           <input_offset>0</input_offset>
-          <input_scaling>1200</input_scaling>
+          <input_scaling>1000</input_scaling>
           <zero_position_disarmed>0</zero_position_disarmed>
           <zero_position_armed>0</zero_position_armed>
           <joint_control_type>velocity</joint_control_type>
@@ -773,7 +790,7 @@
         <channel name="rotor2">
           <input_index>2</input_index>
           <input_offset>0</input_offset>
-          <input_scaling>1200</input_scaling>
+          <input_scaling>1000</input_scaling>
           <zero_position_disarmed>0</zero_position_disarmed>
           <zero_position_armed>0</zero_position_armed>
           <joint_control_type>velocity</joint_control_type>
@@ -782,14 +799,23 @@
         <channel name="rotor3">
           <input_index>3</input_index>
           <input_offset>0</input_offset>
-          <input_scaling>1200</input_scaling>
+          <input_scaling>1000</input_scaling>
           <zero_position_disarmed>0</zero_position_disarmed>
           <zero_position_armed>0</zero_position_armed>
           <joint_control_type>velocity</joint_control_type>
           <joint_name>rotor_3_joint</joint_name>
         </channel>
+        <channel name="rotor4">
+          <input_index>4</input_index>
+          <input_offset>0</input_offset>
+          <input_scaling>1000</input_scaling>
+          <zero_position_disarmed>0</zero_position_disarmed>
+          <zero_position_armed>0</zero_position_armed>
+          <joint_control_type>velocity</joint_control_type>
+          <joint_name>rotor_4_joint</joint_name>
+        </channel>
         <channel name="left_elevon">
-          <input_index>5</input_index>
+          <input_index>6</input_index>
           <input_offset>0</input_offset>
           <input_scaling>1</input_scaling>
           <zero_position_disarmed>0</zero_position_disarmed>
@@ -798,7 +824,7 @@
           <joint_name>left_elevon_joint</joint_name>
         </channel>
         <channel name="right_elevon">
-          <input_index>6</input_index>
+          <input_index>7</input_index>
           <input_offset>0</input_offset>
           <input_scaling>1</input_scaling>
           <zero_position_disarmed>0</zero_position_disarmed>
